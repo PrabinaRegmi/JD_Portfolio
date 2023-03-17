@@ -309,6 +309,68 @@ img {
 
 
 
+// Contact Page
+#contact{
+  // contact section A
+  &-a{
+    .text-fields{
+      display: grid;
+      grid-template-areas:  
+      'name  email'
+      'subject phone'
+      'message message';
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      // Grid area
+      .name-input{
+        grid-area: name;
+      }
+      .subject-input{
+        grid-area: subject;
+      }
+      .email-input{
+        grid-area: email;
+      }
+      .phone-input{
+        grid-area: phone;
+      }
+      .message-input{
+        grid-area: message;
+        height: 100px;
+      }
+
+      .text-input{
+        padding: 0.5rem 1rem;
+      }
+
+    }
+
+    // targeting button
+    button[type='submit']{
+      width: 50%;
+    }
+  }
+
+// contact section B
+&-b{
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+}
+
+  // contact section C
+  &-c{
+    h1{
+      text-align: center;
+      font-size: 4rem;
+    }
+  }
+   
+}
+
 // Footer
 #main-footer {
   background: $dark-color;
@@ -337,4 +399,7 @@ img {
     }
   }
 }
+
+// Import Media Queries (_media.scss)
+@import 'media';
 
